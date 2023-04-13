@@ -237,7 +237,7 @@ func ForTerminal(x *Z.Cmd, section string) {
 		// always print a synopsis so we can communicate with command
 		// developers about invalid field combinations through ERRORs
 
-		Z.PrintEmph("**SYNOPSIS**\n")
+		Z.PrintEmph("**USAGE**\n")
 
 		switch {
 
@@ -272,7 +272,7 @@ func ForTerminal(x *Z.Cmd, section string) {
 			Z.PrintMarkf(`%v`, x.Name)
 
 		default:
-			Z.PrintMark("{ERROR: unknown synopsis combination}")
+			Z.PrintMark("{ERROR: unknown usage combination}")
 		}
 
 		if len(x.Commands) > 0 {
